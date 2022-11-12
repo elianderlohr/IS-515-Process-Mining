@@ -8,8 +8,7 @@ def _append(title, content):
         file.close()
 
 if __name__ == "__main__":
-    #log = pm4py.read_xes(str(Path(__file__).parents[2]) + "/data/BPI_Challenge_2019-3-w-after.xes.gz")
-    log = pm4py.read_xes(str(Path(__file__).parents[0]) + "/data/endoint-variation.xes.gz")
+    log = pm4py.read_xes(str(Path(__file__).parents[2]) + "/data/BPI_Challenge_2019-3-w-after.xes.gz")
     bpmn_graph = pm4py.read_bpmn(str(Path(__file__).parents[0]) + "/bpmn/BPMN_Celonis.bpmn")
 
     net, im, fm = pm4py.convert_to_petri_net(bpmn_graph)    
