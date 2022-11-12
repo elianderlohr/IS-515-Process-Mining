@@ -17,18 +17,25 @@ if __name__ == "__main__":
     fitness = pm4py.fitness_alignments(log, net, im, fm)
     _append("fitness_alignments", str(fitness))
 
+    print(str(fitness))
+
     print("Start fitness_token_based_replay:")
     fitness = pm4py.fitness_token_based_replay(log, net, im, fm)
     _append("fitness_token_based_replay", str(fitness))
+
+    print(str(fitness))
 
     print("Start precision_token_based_replay")
     prec = pm4py.precision_token_based_replay(log, net, im, fm)
     _append("precision_token_based_replay", str(prec))
 
+    print(str(prec))
+
     print("Start precision_alignments")
     prec = pm4py.precision_alignments(log, net, im, fm)
     _append("precision_alignments", str(prec))
 
+    print(str(prec))
 
 
 
