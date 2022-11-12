@@ -1,0 +1,1 @@
+Disco allows export with "Endpoint". This seems to make the petri net complex. Therefore i generate thmem without.
