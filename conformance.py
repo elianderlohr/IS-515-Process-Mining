@@ -10,9 +10,11 @@ def _append(title, content):
 
 
 if __name__ == "__main__":
-    log = pm4py.read_xes(str(Path(__file__).parents[0]) + "/data/0")
+    log = pm4py.read_xes(
+        str(Path(__file__).parents[0]) + "/data/BPI_Challenge_2019-3-w-after.xes.gz"
+    )
     bpmn_graph = pm4py.read_bpmn(
-        str(Path(__file__).parents[0]) + "/bpmn/BPMN_Celonis.bpmn"
+        str(Path(__file__).parents[0]) + "/bpmn/BPMN_Celonis_as-is_final.bpmn"
     )
 
     net, im, fm = pm4py.convert_to_petri_net(bpmn_graph)
@@ -74,3 +76,5 @@ if __name__ == "__main__":
 
     print("alignment-based" + str(log_fitness))
     _append("alignment-based", str(log_fitness))
+
+#%%
